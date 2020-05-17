@@ -12,7 +12,12 @@ export { default as Home } from './ecosystems/Home';
 export { default as Deputados } from './ecosystems/Deputados';
 
 // Organisms
-export { default as Card } from './organisms/Card';
+export { default as Header } from './organisms/Header';
+export { default as Content } from './organisms/Content';
+
+// Molecules
+export { default as Card } from './molecules/Card';
 
 // Atoms
 export { default as Link } from './atoms/Link';
+export { default as Button } from './atoms/Button';

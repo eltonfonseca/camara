@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'components';
 import {
   Container,
   Header,
@@ -7,8 +8,8 @@ import {
   Partido,
   Label,
   Sigla,
-  Button,
 } from './style';
+
 
 export default function Card({ fotoUrl, name, partido }) {
   return (
@@ -21,7 +22,7 @@ export default function Card({ fotoUrl, name, partido }) {
           <Sigla>{ partido }</Sigla>
         </Partido>
       </Body>
-      <Button onClick={() => alert('teste')}>Detalhes</Button>
+      <Button>Detalhes</Button>
     </Container>
   );
 }

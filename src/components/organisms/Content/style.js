@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: #18191A;
-  color: white;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
