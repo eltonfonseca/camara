@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Search } from '@styled-icons/boxicons-regular/Search';
 
 export const Container = styled.div`
+  display: flex;
+  align-items: center;
   background: #242526;
   padding: 20px;
   box-shadow: 0px 0px 3px 0px black;
@@ -24,7 +26,9 @@ export const SearchInput = styled.input`
 
 export const SearchButton = styled.button`
   width: 40px;
+  background: #4A4B4D;
   border: none;
+  border-radius: 0px 50px 50px 0px;
   outline: none;
   cursor: pointer;
   height: 50px;
