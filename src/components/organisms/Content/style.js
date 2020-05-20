@@ -1,7 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+
+  ${({ align }) => (
+    align === 'wrap'
+      ? css`flex-wrap: wrap;`
+      : css`
+        flex-direction: column;
+        align-items: center;
+        `)}
 `;

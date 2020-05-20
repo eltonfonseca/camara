@@ -1,18 +1,11 @@
 import React from 'react';
-import {
-  Container,
-  SearchInput,
-  SearchButton,
-  SearchIcon,
-} from './style';
+import { SearchBox } from 'components';
+import { Container } from './style';
 
 export default function Header() {
   return (
     <Container>
-      <SearchInput type="text" placeholder="Buscar" />
-      <SearchButton>
-        <SearchIcon />
-      </SearchButton>
+      <SearchBox />
     </Container>
   );
 }

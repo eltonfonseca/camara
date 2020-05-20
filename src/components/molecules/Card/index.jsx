@@ -1,26 +1,28 @@
 import React from 'react';
-import { Button } from 'components';
+import {
+  Button,
+  Imagem,
+} from 'components';
 import {
   Container,
-  Header,
   Body,
-  Name,
-  Partido,
-  Label,
-  Sigla,
 } from './style';
 
-
-export default function Card({ fotoUrl, name, partido }) {
+export default function Card({
+  children,
+  fotoUrl,
+  fotoWidth,
+  fotoHeight,
+}) {
   return (
     <Container>
-      <Header url={fotoUrl} />
+      <Imagem
+        url={fotoUrl}
+        width={fotoWidth}
+        heigth={fotoHeight}
+      />
       <Body>
-        <Name>{ name }</Name>
-        <Partido>
-          <Label>Partido:</Label>
-          <Sigla>{ partido }</Sigla>
-        </Partido>
+        { children }
       </Body>
       <Button>Detalhes</Button>
     </Container>

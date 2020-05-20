@@ -8,7 +8,9 @@ import {
 import {
   HomePage,
   DeputadosPage,
+  DeputadoInfoPage,
   PartidosPage,
+  PartidoInfoPage,
   NotFound,
 } from 'components';
 
@@ -22,7 +24,9 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/deputados" component={DeputadosPage} />
+          <Route path="/deputado" component={DeputadoInfoPage} />
           <Route exact path="/partidos" component={PartidosPage} />
+          <Route path="/partido" component={PartidoInfoPage} />
           <Route component={NotFound} />
         </Switch>
       </Router>

@@ -1,7 +1,8 @@
 import React from 'react';
+import { Partidos } from 'components';
 
 export default function PartidosPage() {
   return (
-    <h1>Partidos Page</h1>
+    <Partidos />
   );
 }

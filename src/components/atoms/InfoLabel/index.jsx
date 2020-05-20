@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container } from './style';
 
-export default function Content({ align, children }) {
+export default function InfoLabel({ children, color }) {
   return (
-    <Container align={align}>
+    <Container color={color}>
       { children }
     </Container>
   );
