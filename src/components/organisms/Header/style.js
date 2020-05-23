@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #242526;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: ${({ theme }) => theme.colors.primary};
   padding: 20px;
-  box-shadow: 0px 0px 3px 0px black;
+  box-shadow: 0px 0px 3px 0px ${({ theme }) => theme.colors.shadowColor};
 `;

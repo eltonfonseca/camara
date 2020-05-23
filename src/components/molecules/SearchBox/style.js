@@ -9,21 +9,21 @@ export const Container = styled.div`
 export const SearchInput = styled.input`
   height: 30px;
   font-size: 14pt;
-  background: #4A4B4D;
+  background: ${({ theme }) => theme.colors.secondary};
   border: none;
   padding: 10px;
-  color: white;
+  color: ${({ theme }) => theme.colors.fontColor};
   outline: none;
   border-radius: 50px 0px 0px 50px;
 
   &::placeholder {
-    color: #B0B3B8;
+    color: ${({ theme }) => theme.colors.fontColor};
   }
 `;
 
 export const SearchButton = styled.button`
   width: 40px;
-  background: #4A4B4D;
+  background: ${({ theme }) => theme.colors.secondary};
   border: none;
   border-radius: 0px 50px 50px 0px;
   outline: none;
@@ -33,5 +33,5 @@ export const SearchButton = styled.button`
 
 export const SearchIcon = styled(Search)`
   width: 30px;
-  color: #B0B3B8;
+  color: ${({ theme }) => theme.colors.fontColor};
 `;

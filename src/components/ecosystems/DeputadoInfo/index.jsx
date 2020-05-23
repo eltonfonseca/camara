@@ -37,12 +37,14 @@ export default function DeputadoInfo() {
                   info={deputado.ultimoStatus ? deputado.ultimoStatus.condicaoEleitoral : 'Sem Informação'}
                   bgLabel="#4ba661"
                   bgInfo="#4e5052"
+                  color="white"
                 />
                 <LabelBox
                   label="Situação"
                   info={deputado.ultimoStatus ? deputado.ultimoStatus.situacao : 'Sem Informação'}
                   bgLabel="#4ba661"
                   bgInfo="#4e5052"
+                  color="white"
                 />
               </LabelContainer>
               <InfoBox title="Informações">

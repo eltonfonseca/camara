@@ -26,6 +26,7 @@ export { default as Card } from './molecules/Card';
 export { default as SearchBox } from './molecules/SearchBox';
 export { default as LabelBox } from './molecules/LabelBox';
 export { default as InfoBox } from './molecules/InfoBox';
+export { default as Switcher } from './molecules/Switcher';
 
 // Atoms
 export { default as Link } from './atoms/Link';

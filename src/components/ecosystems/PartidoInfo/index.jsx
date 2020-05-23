@@ -32,6 +32,7 @@ export default function PartidoInfo() {
               info={partido.sigla}
               bgLabel="#4ba661"
               bgInfo="#4e5052"
+              color="white"
             />
             <InfoBox title="Informações">
               <Info title="Situação:" info={partido.status ? partido.status.situacao : ''} />

@@ -4,8 +4,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  background: #18191A;
-  color: white;
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.fontColor};
 `;
 
 export const LabelContainer = styled.div`

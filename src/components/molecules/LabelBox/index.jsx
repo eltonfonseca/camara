@@ -3,6 +3,7 @@ import { Label, InfoLabel } from 'components';
 import { Container } from './style';
 
 export default function LabelBox({
+  color,
   label,
   info,
   bgLabel,
@@ -10,8 +11,8 @@ export default function LabelBox({
 }) {
   return (
     <Container>
-      <Label color={bgLabel}>{label}</Label>
-      <InfoLabel color={bgInfo}>{info}</InfoLabel>
+      <Label fontColor={color} color={bgLabel}>{label}</Label>
+      <InfoLabel fontColor={color} color={bgInfo}>{info}</InfoLabel>
     </Container>
   );
 }

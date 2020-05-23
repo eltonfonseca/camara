@@ -31,6 +31,7 @@ export default function Deputados() {
                   {deputado.nome}
                 </Title>
                 <LabelBox
+                  color="white"
                   label="Partido:"
                   info={deputado.siglaPartido}
                   bgLabel="#3895FF"

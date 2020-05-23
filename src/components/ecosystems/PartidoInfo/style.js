@@ -5,6 +5,6 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  background: #18191A;
-  color: white;
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.fontColor};
 `;

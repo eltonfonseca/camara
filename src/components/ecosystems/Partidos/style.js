@@ -5,6 +5,6 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background: #18191A;
-  color: white;
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.fontColor};
 `;

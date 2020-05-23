@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container } from './style';
 
-export default function InfoLabel({ children, color }) {
+export default function InfoLabel({ children, color, fontColor }) {
   return (
-    <Container color={color}>
+    <Container color={color} fontColor={fontColor}>
       { children }
     </Container>
   );

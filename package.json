@@ -32,6 +32,7 @@
     "react-dom": "^16.13.1",
     "react-loader-spinner": "^3.1.14",
     "react-router-dom": "^5.1.2",
+    "react-switch": "^5.0.1",
     "styled-components": "^5.1.0",
     "styled-icons": "^10.2.1"
   }
