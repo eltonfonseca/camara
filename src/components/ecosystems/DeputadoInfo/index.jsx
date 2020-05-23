@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDeputados } from 'components/contexts/DeputadosProvider';
 import {
   Content,
   LabelBox,
@@ -6,6 +7,7 @@ import {
   Info,
   Title,
   Imagem,
+  Loading,
 } from 'components';
 import {
   Container,
@@ -13,53 +15,58 @@ import {
 } from './style';
 
 export default function DeputadoInfo() {
+  const { deputadoHook: { deputado } } = useDeputados();
+
   return (
     <Container>
-      <Content align="column">
-        <Imagem
-          url="https://www.camara.leg.br/internet/deputado/bandep/204554.jpg"
-          width="300px"
-          heigth="300px"
-        />
-        <Title weight="100" transform="uppercase">
-          José Abílio Silva de Santana
-        </Title>
-        <LabelContainer>
-          <LabelBox
-            label="Condição Eleitoral:"
-            info="Titular"
-            bgLabel="#4ba661"
-            bgInfo="#4e5052"
-          />
-          <LabelBox
-            label="Situação"
-            info="Exercício"
-            bgLabel="#4ba661"
-            bgInfo="#4e5052"
-          />
-        </LabelContainer>
-        <InfoBox title="Informações">
-          <Info title="Nome:" info="José Abílio Silva de Santana" />
-          <Info title="CPF:" info="3660760504" />
-          <Info title="Partido:" info="PL" />
-          <Info title="UF:" info="BA" />
-          <Info title="ID Legislatura:" info="56" />
-          <Info title="Data de Nascimento:" info="13/02/1965" />
-          <Info title="Naturalidade:" info="Salvador" />
-          <Info title="Escolaridade:" info="Superior Incompleto" />
-        </InfoBox>
-        <InfoBox title="Gabinete">
-          <Info title="Nome:" info="531" />
-          <Info title="Prédio:" info="4" />
-          <Info title="Sala:" info="531" />
-          <Info title="Andar:" info="5" />
-          <Info title="Telefone:" info="3215-5531" />
-          <Info title="E-mail:" info="dep.abiliosantana@camara.leg.br" />
-        </InfoBox>
-        <InfoBox title="Despesas">
-          asdas
-        </InfoBox>
-      </Content>
+      {
+        deputado
+          ? (
+            <Content align="column">
+              <Imagem
+                url={deputado.ultimoStatus ? deputado.ultimoStatus.urlFoto : 'https://www.tribunadeituverava.com.br/wp-content/uploads/2018/02/sem-foto.jpg'}
+                width="300px"
+                heigth="300px"
+              />
+              <Title weight="100" transform="uppercase">
+                {deputado.ultimoStatus ? deputado.ultimoStatus.nome : 'Sem Informação'}
+              </Title>
+              <LabelContainer>
+                <LabelBox
+                  label="Condição Eleitoral:"
+                  info={deputado.ultimoStatus ? deputado.ultimoStatus.condicaoEleitoral : 'Sem Informação'}
+                  bgLabel="#4ba661"
+                  bgInfo="#4e5052"
+                />
+                <LabelBox
+                  label="Situação"
+                  info={deputado.ultimoStatus ? deputado.ultimoStatus.situacao : 'Sem Informação'}
+                  bgLabel="#4ba661"
+                  bgInfo="#4e5052"
+                />
+              </LabelContainer>
+              <InfoBox title="Informações">
+                <Info title="Nome:" info={deputado.nomeCivil} />
+                <Info title="CPF:" info={deputado.cpf} />
+                <Info title="Partido:" info={deputado.ultimoStatus ? deputado.ultimoStatus.siglaPartido : 'Sem Informação'} />
+                <Info title="UF:" info={deputado.ufNascimento} />
+                <Info title="ID Legislatura:" info={deputado.ultimoStatus ? deputado.ultimoStatus.idLegislatura : 'Sem Informação'} />
+                <Info title="Data de Nascimento:" info={deputado.dataNascimento} />
+                <Info title="Naturalidade:" info={deputado.municipioNascimento} />
+                <Info title="Escolaridade:" info={deputado.escolaridade} />
+              </InfoBox>
+              <InfoBox title="Gabinete">
+                <Info title="Nome:" info={deputado.ultimoStatus ? deputado.ultimoStatus.gabinete.nome : 'Sem Informação'} />
+                <Info title="Prédio:" info={deputado.ultimoStatus ? deputado.ultimoStatus.gabinete.predio : 'Sem Informação'} />
+                <Info title="Sala:" info={deputado.ultimoStatus ? deputado.ultimoStatus.gabinete.sala : 'Sem Informação'} />
+                <Info title="Andar:" info={deputado.ultimoStatus ? deputado.ultimoStatus.gabinete.andar : 'Sem Informação'} />
+                <Info title="Telefone:" info={deputado.ultimoStatus ? deputado.ultimoStatus.gabinete.telefone : 'Sem Informação'} />
+                <Info title="E-mail:" info={deputado.ultimoStatus ? deputado.ultimoStatus.gabinete.email : 'Sem Informação'} />
+              </InfoBox>
+            </Content>
+          )
+          : <Loading />
+      }
     </Container>
   );
 }

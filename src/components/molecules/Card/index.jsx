@@ -13,6 +13,7 @@ export default function Card({
   fotoUrl,
   fotoWidth,
   fotoHeight,
+  url,
 }) {
   return (
     <Container>
@@ -24,7 +25,7 @@ export default function Card({
       <Body>
         { children }
       </Body>
-      <Button>Detalhes</Button>
+      <Button url={url}>Detalhes</Button>
     </Container>
   );
 }

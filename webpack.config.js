@@ -7,7 +7,11 @@ module.exports = {
     alias: {
       components: path.resolve(__dirname, 'src', 'components'),
       images: path.resolve(__dirname, 'src', 'assets', 'images'),
+      utils: path.resolve(__dirname, 'src', 'utils'),
     },
+  },
+  output: {
+    publicPath: '/',
   },
   devServer: {
     historyApiFallback: true,

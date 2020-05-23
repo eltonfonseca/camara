@@ -19,6 +19,7 @@ export { default as PartidoInfo } from './ecosystems/PartidoInfo';
 // Organisms
 export { default as Header } from './organisms/Header';
 export { default as Content } from './organisms/Content';
+export { default as Loading } from './organisms/Loading';
 
 // Molecules
 export { default as Card } from './molecules/Card';

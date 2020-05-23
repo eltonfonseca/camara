@@ -1,255 +1,37 @@
 import React from 'react';
+import { usePartidos } from 'components/contexts/PartidosProvider';
 import {
   Header,
   Content,
   Card,
   Title,
   LabelBox,
+  Loading,
 } from 'components';
 import { Container } from './style';
 
 export default function Partidos() {
+  const { partidosHook: { partidos } } = usePartidos();
+
   return (
     <Container>
-      <Header />
+      <Header resource="partidos" />
       <Content align="wrap">
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
-
-        <Card
-          fotoUrl="https://www.camara.leg.br/internet/Deputado/img/partidos/AVANTE.gif"
-          fotoWidth="100px"
-          fotoHeight="100px"
-        >
-          <Title size="14pt" weight="100">Democracia Cristã</Title>
-          <LabelBox
-            label="Partido:"
-            info="PL"
-            bgLabel="#3895FF"
-            bgInfo="#F7C045"
-          />
-        </Card>
+        {
+          partidos
+            ? partidos.map((partido) => (
+              <Card key={partido.id} url={`/partido/${partido.id}`}>
+                <Title size="14pt" weight="100">{partido.nome}</Title>
+                <LabelBox
+                  label="Sigla:"
+                  info={partido.sigla}
+                  bgLabel="#3895FF"
+                  bgInfo="#F7C045"
+                />
+              </Card>
+            ))
+            : <Loading />
+        }
       </Content>
     </Container>
   );

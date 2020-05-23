@@ -1,8 +1,8 @@
 import React from 'react';
 import { Style } from './style';
 
-export default function Button({ children }) {
+export default function Button({ children, url }) {
   return (
-    <Style>{children}</Style>
+    <Style to={url}>{children}</Style>
   );
 }
